@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<script src="https://unpkg.com/boardstreams"></script>
+<script>
+
+	const BS = new BoardStreams('/ws');
+	let ch = BS.joinChannel('counter');	
+	ch.on('event', function (ev){
+		console.log("got event: ");
+		console.log(ev);
+	});
+</script>
+  	<title><%= title %></title></head>
+  <body><%= content %></body>
+</html>
